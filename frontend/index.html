@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Insight | Funciones de Agregación</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">SQL<span>Insight</span></div>
+</nav>
+
+<main class="dashboard">
+
+    <aside class="sidebar">
+        <h3>Funciones</h3>
+        <ul>
+            <li onclick="render('count')" id="btn-count">COUNT()</li>
+            <li onclick="render('sum')" id="btn-sum">SUM()</li>
+            <li onclick="render('avg')" id="btn-avg">AVG()</li>
+            <li onclick="render('min')" id="btn-min">MIN()</li>
+            <li onclick="render('max')" id="btn-max">MAX()</li>
+        </ul>
+    </aside>
+
+    <section class="content">
+        <div id="display-card" class="card fade-in">
+            <h1 id="titulo">Selecciona una función</h1>
+            <p id="descripcion" class="text-secondary">
+                Domina el análisis de datos con SQL.
+            </p>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="file-name">query.sql</span>
+                </div>
+
+                <pre><code id="codigo">-- El código aparecerá aquí</code></pre>
+            </div>
+
+            <div id="explicacion" class="explanation">
+                Aquí aparecerá la explicación del código.
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+:root {
+    --bg: #000;
+    --card-bg: #0f0f0f;
+    --text-main: #ffffff;
+    --text-sec: #aaaaaa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+}
+
+/* NAV */
+.navbar {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* LAYOUT */
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    padding: 2rem;
+    border-right: 1px solid #222;
+}
+
+.sidebar h3 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-sec);
+    margin-bottom: 1rem;
+}
+
+.sidebar li {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: white;
+    color: black;
+}
+
+.sidebar li.active {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+/* CONTENT */
+.content {
+    padding: 3rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+.text-secondary {
+    color: var(--text-sec);
+    margin-bottom: 2rem;
+}
+
+/* CODE */
+.code-window {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.code-header {
+    background: #111;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.file-name {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: #888;
+}
+
+pre {
+    padding: 20px;
+    font-family: 'Fira Code', monospace;
+    color: #00ffcc;
+}
+
+/* EXPLICACIÓN */
+.explanation {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #0a0a0a;
+    color: #ccc;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* ANIMACIÓN */
+.fade-in {
+    animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #222;
+    }
+}
